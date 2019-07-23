@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<publisherdb>
+    <publisher>
+        <publishername>McGill</publishername>
+        <publishingcompany>McGill</publishingcompany>
+        <address>1380 Rene Levesque</address>
+    </publisher>
+    <publisher>
+        <publishername>Concordia</publishername>
+        <publishingcompany>Concordia</publishingcompany>
+        <address>1212 Mont Royal</address>
+    </publisher>
+</publisherdb>
