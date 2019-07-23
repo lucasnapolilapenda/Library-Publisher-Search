@@ -21,7 +21,6 @@ public class PublisherRepository {
         }
 
 
-
         public ArrayList<Publisher> searchPublisher(Publisher publisher) throws Exception {
             ArrayList<Publisher> publisherArrayList = new DataBaseManager().repoReader();
             Integer id = 0;
