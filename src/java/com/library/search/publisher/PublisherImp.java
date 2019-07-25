@@ -29,8 +29,7 @@ public class PublisherImp implements PublisherInterface {
      * List of books
      */
     @Override
-    public ArrayList<Publisher> getPublisherInfo(Publisher publisher) throws Exception {
-        System.out.println("aqui estoy");
+    public String getPublisherInfo(Publisher publisher) throws Exception {
             return new PublisherRepository().searchPublisher(publisher);
     }
 }

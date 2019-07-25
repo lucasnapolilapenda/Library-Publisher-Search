@@ -23,6 +23,6 @@ import java.util.ArrayList;
 
 public interface PublisherInterface {
     @WebMethod
-    ArrayList<Publisher> getPublisherInfo(Publisher publisher) throws Exception;
+    String getPublisherInfo(Publisher publisher) throws Exception;
 
 }

@@ -1,24 +1,24 @@
 package com.library.search.publisher;
 
 public class Publisher implements Cloneable {
-    String publisherName;
-    String publishingCompany;
+    String publishername;
+    String publishingcompany;
     String address;
 
     public String getPublisherName() {
-        return publisherName;
+        return publishername;
     }
 
     public void setPublisherName(String publisherName) {
-        this.publisherName = publisherName;
+        this.publishername = publisherName;
     }
 
     public String getPublishingCompany() {
-        return publishingCompany;
+        return publishingcompany;
     }
 
     public void setPublishingCompany(String publishingCompany) {
-        this.publishingCompany = publishingCompany;
+        this.publishingcompany = publishingCompany;
     }
 
     public String getAddress() {
@@ -31,9 +31,9 @@ public class Publisher implements Cloneable {
 
     public Publisher clone() {
         Publisher p = new Publisher();
-        p.setPublisherName(this.publisherName);
+        p.setPublisherName(this.publishername);
         p.setAddress(this.address);
-        p.setPublishingCompany(this.publishingCompany);
+        p.setPublishingCompany(this.publishingcompany);
         return p;
     }
 }

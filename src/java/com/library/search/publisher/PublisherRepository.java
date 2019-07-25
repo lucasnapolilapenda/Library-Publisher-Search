@@ -21,7 +21,7 @@ public class PublisherRepository {
         }
 
 
-        public ArrayList<Publisher> searchPublisher(Publisher publisher) throws Exception {
+        public String searchPublisher(Publisher publisher) throws Exception {
             ArrayList<Publisher> publisherArrayList = new DataBaseManager().repoReader();
             Integer id = 0;
             if (publisher.getPublisherName() != null) {
@@ -33,18 +33,52 @@ public class PublisherRepository {
                 }
             }
 
-            if (map.get(1) == null){
-                return publisherArrayList;
+            if (map.get(1) != null){
+                String publisher1 = "Name: " + map.get(1).getPublisherName() +
+                                    " Company: " + map.get(1).getPublishingCompany() +
+                                    " Address: " + map.get(1).getAddress();
+                return publisher1;
             }
 
-
-
-            Set<Integer> ids = map.keySet();
-            ArrayList<Publisher> finalPublisherList = new ArrayList<>();
-            for (Integer aux : ids) {
-                finalPublisherList.add(map.get(aux).clone());
+            else {
+                return "No publisher associated has been found";
             }
-            map.clear();
-            return finalPublisherList;
         }
+
+
+
+        // Method to return an Publisher Object or Array is case of being necessary
+    /*
+        public object searchPublisherObject(Publisher publisher) throws Exception {
+        ArrayList<Publisher> publisherArrayList = new DataBaseManager().repoReader();
+        Integer id = 0;
+        if (publisher.getPublisherName() != null) {
+            for (Publisher p : publisherArrayList) {
+                if (p.getPublisherName().equals(publisher.getPublisherName())) {
+                    id++;
+                    map.put(id, p);
+                }
+            }
+        }
+
+        if (map.get(1) == null){
+            return publisherArrayList;
+        }
+
+
+
+        Set<Integer> ids = map.keySet();
+        ArrayList<Publisher> finalPublisherList = new ArrayList<>();
+        for (Integer aux : ids) {
+            finalPublisherList.add(map.get(aux).clone());
+        }
+        map.clear();
+        return finalPublisherList;
+    }
+     */
+
+
+
+
+
 }
