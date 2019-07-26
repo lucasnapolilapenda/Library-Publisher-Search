@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <publisherdb>
     <publisher>
-        <publishername>McGill</publishername>
+        <publishername>V2</publishername>
         <publishingcompany>McGill</publishingcompany>
         <address>1380 Rene Levesque</address>
     </publisher>
     <publisher>
-        <publishername>Concordia</publishername>
+        <publishername>V1</publishername>
         <publishingcompany>Concordia</publishingcompany>
         <address>1212 Mont Royal</address>
     </publisher>

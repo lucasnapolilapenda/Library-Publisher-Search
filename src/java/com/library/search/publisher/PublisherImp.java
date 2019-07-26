@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * Represents all services implementation
  */
-@WebService(endpointInterface = "com.library.search.publisher.PublisherImp")
+@WebService(endpointInterface = "com.library.search.publisher.PublisherInterface")
 
 public class PublisherImp implements PublisherInterface {
 

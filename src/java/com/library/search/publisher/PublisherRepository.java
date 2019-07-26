@@ -24,15 +24,17 @@ public class PublisherRepository {
         public String searchPublisher(Publisher publisher) throws Exception {
             ArrayList<Publisher> publisherArrayList = new DataBaseManager().repoReader();
             Integer id = 0;
-            if (publisher.getPublisherName() != null) {
+            System.out.println(publisher.getPublisherName());
                 for (Publisher p : publisherArrayList) {
+                    System.out.println(p.publishername);
+                    System.out.println(publisher.publishername+"ll");
                     if (p.getPublisherName().equals(publisher.getPublisherName())) {
                         id++;
                         map.put(id, p);
                     }
                 }
-            }
 
+                System.out.println(map.get(1));
             if (map.get(1) != null){
                 String publisher1 = "Name: " + map.get(1).getPublisherName() +
                                     " Company: " + map.get(1).getPublishingCompany() +

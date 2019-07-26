@@ -10,7 +10,7 @@ package com.library.search.publisher;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
-import java.util.ArrayList;
+import javax.jws.soap.SOAPBinding.Style;
 
 
 /**
@@ -19,7 +19,7 @@ import java.util.ArrayList;
  *
  */
 @WebService
-@SOAPBinding(style = SOAPBinding.Style.RPC)
+@SOAPBinding(style = Style.RPC)
 
 public interface PublisherInterface {
     @WebMethod
