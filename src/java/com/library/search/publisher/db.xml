@@ -1,13 +1,18 @@
 <?xml version="1.0"?>
 <publisherdb>
     <publisher>
-        <publishername>V2</publishername>
-        <publishingcompany>McGill</publishingcompany>
+        <publishername>McGill</publishername>
+        <publishingcompany>McGill University</publishingcompany>
         <address>1380 Rene Levesque</address>
     </publisher>
     <publisher>
-        <publishername>V1</publishername>
-        <publishingcompany>Concordia</publishingcompany>
+        <publishername>Concordia</publishername>
+        <publishingcompany>Concordia University</publishingcompany>
         <address>1212 Mont Royal</address>
+    </publisher>
+    <publisher>
+        <publishername>Thanos</publishername>
+        <publishingcompany>Marvel</publishingcompany>
+        <address>1232 Infinite Stone</address>
     </publisher>
 </publisherdb>
