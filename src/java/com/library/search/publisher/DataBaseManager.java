@@ -7,16 +7,13 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
 
 public class DataBaseManager {
 
     public ArrayList<Publisher> repoReader () {
         ArrayList<Publisher> publisherArrayList = new ArrayList<Publisher>();
-        BufferedReader reader = null;
+
         try {
 
             String fXmlFile = "/Users/lucasnapoli/Documentos Lucas/Projects/Mcgill/WebServices/Assingment4Micro/LibrarySearchPublisher/src/java/com/library/search/publisher/db.xml";
