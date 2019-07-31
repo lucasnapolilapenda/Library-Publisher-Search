@@ -11,12 +11,8 @@ package com.library.search.publisher;
 
 import javax.annotation.Resource;
 import javax.jws.WebService;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.UriInfo;
 import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
-import javax.xml.ws.http.HTTPException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -30,18 +26,22 @@ public class PublisherImp implements PublisherInterface {
     @Resource
     WebServiceContext context;
 
-
     /**
      * @return returns java.lang.String
      * List of books
      */
     @Override
-    public String getPublisherInfo(Publisher publisher) throws Exception {
-        if (isAuthenticated()) {
-            return new PublisherRepository().searchPublisher(publisher);
-       } else {
-            throw new HTTPException(401);
-       }
+    public String getPublisherInfo(Publisher publisher) {
+        try {
+            if (isAuthenticated()) {
+                return PublisherRepository.getInstance(context).searchPublisher(publisher);
+            } else {
+                return "Problems with the Publisher Service, contact the administrator";
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+        return  "Problems with the Publisher Service, contact the administrator";
     }
 
     private boolean isAuthenticated() {

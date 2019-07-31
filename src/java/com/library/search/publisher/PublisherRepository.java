@@ -1,8 +1,8 @@
 package com.library.search.publisher;
 
-import javax.ws.rs.core.UriInfo;
+
+import javax.xml.ws.WebServiceContext;
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class PublisherRepository {
@@ -15,25 +15,24 @@ public class PublisherRepository {
 
         private static PublisherRepository instance = null;
 
-        public static PublisherRepository getInstance(UriInfo context){
+        public static PublisherRepository getInstance(WebServiceContext context){
             return instance == null && context != null?
                     (instance = new PublisherRepository()): instance;
         }
 
 
-        public String searchPublisher(Publisher publisher) throws Exception {
+        public String searchPublisher(Publisher publisher) {
             ArrayList<Publisher> publisherArrayList = new DataBaseManager().repoReader();
             Integer id = 0;
             System.out.println(publisher.getPublisherName());
                 for (Publisher p : publisherArrayList) {
                     System.out.println(p.publishername);
-                    System.out.println(publisher.publishername+"ll");
+                    System.out.println(publisher.publishername+"OK");
                     if (p.getPublisherName().equals(publisher.getPublisherName())) {
                         id++;
                         map.put(id, p);
                     }
                 }
-
                 System.out.println(map.get(1));
             if (map.get(1) != null){
                 String publisher1 = "Name: " + map.get(1).getPublisherName() +
@@ -41,7 +40,6 @@ public class PublisherRepository {
                                     " Address: " + map.get(1).getAddress();
                 return publisher1;
             }
-
             else {
                 return "No publisher associated has been found";
             }
