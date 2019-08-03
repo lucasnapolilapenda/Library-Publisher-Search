@@ -15,7 +15,7 @@ public class DataBaseManager {
         ArrayList<Publisher> publisherArrayList = new ArrayList<Publisher>();
 
         try {
-            String fXmlFile = "/Users/lucasnapoli/Documentos Lucas/Projects/Mcgill/WebServices/Assingment4Micro/LibrarySearchPublisher/src/main/webapp/WEB-INF/publishers.xml";
+            String fXmlFile = "src/main/webapp/WEB-INF/publishers.xml";
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(fXmlFile);
@@ -40,7 +40,7 @@ public class DataBaseManager {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error: " + e);
         }
 
         return publisherArrayList;
