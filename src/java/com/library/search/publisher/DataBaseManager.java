@@ -15,7 +15,6 @@ public class DataBaseManager {
         ArrayList<Publisher> publisherArrayList = new ArrayList<Publisher>();
 
         try {
-
             String fXmlFile = "/Users/lucasnapoli/Documentos Lucas/Projects/Mcgill/WebServices/Assingment4Micro/LibrarySearchPublisher/src/main/webapp/WEB-INF/publishers.xml";
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -39,7 +38,6 @@ public class DataBaseManager {
                     publisher.setAddress(eElement.getElementsByTagName("address").item(0).getTextContent());
                     publisherArrayList.add(publisher);
                 }
-
             }
         } catch (Exception e) {
             e.printStackTrace();

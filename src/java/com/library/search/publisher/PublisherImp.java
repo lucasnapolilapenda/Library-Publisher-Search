@@ -32,17 +32,21 @@ public class PublisherImp implements PublisherInterface {
      */
     @Override
     public String getPublisherInfo(Publisher publisher) {
-        try {
+
             if (isAuthenticated()) {
                 return PublisherRepository.getInstance(context).searchPublisher(publisher);
             } else {
-                return "Problems with the Publisher Service, contact the administrator";
+            Throwable t;
+            t = new IllegalArgumentException ("Credential problem");
+            try {
+                throw new Fault ( "There a error with", t );
+            } catch (Fault fault) {
+                System.out.println(fault);
             }
-        } catch (Exception e) {
-            System.out.println("Error: " + e);
         }
-        return  "Problems with the Publisher Service, contact the administrator";
+        return "";
     }
+
 
     private boolean isAuthenticated() {
         MessageContext messageContext = context.getMessageContext();
