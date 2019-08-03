@@ -1,5 +1,18 @@
 package com.library.search.publisher;
 
+/**
+ *
+ * @author Lucas Napoli
+ * V1.0
+ * Library Microservices
+ * Service Publisher Search
+ */
+
+
+/**
+ * Class to manage Publisher Object
+ */
+
 public class Publisher implements Cloneable {
     String publishername;
     String publishingcompany;

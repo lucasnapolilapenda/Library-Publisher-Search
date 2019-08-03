@@ -48,6 +48,12 @@ public class PublisherImp implements PublisherInterface {
     }
 
 
+    /**
+     * Authentication
+     * @return returns Boolean to validate credentiasl
+     * List of books
+     */
+
     private boolean isAuthenticated() {
         MessageContext messageContext = context.getMessageContext();
         Map httpHeaders = (Map) messageContext.get(MessageContext.HTTP_REQUEST_HEADERS);

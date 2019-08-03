@@ -1,5 +1,13 @@
 package com.library.search.publisher;
 
+/**
+ *
+ * @author Lucas Napoli
+ * V1.0
+ * Library Microservices
+ * Service Publisher Search
+ */
+
 
 import javax.xml.ws.WebServiceContext;
 import java.util.ArrayList;
@@ -15,10 +23,22 @@ public class PublisherRepository {
 
         private static PublisherRepository instance = null;
 
+    /**
+     * Instance Creation
+     * @param context Web service context
+     * @return Context
+     */
+
         public static PublisherRepository getInstance(WebServiceContext context){
             return instance == null && context != null?
                     (instance = new PublisherRepository()): instance;
         }
+
+    /**
+     * Search Publishers
+     * @param publisher Publisher info Object
+     * @return String with info
+     */
 
 
         public String searchPublisher(Publisher publisher) {

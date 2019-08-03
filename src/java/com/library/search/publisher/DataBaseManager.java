@@ -1,5 +1,13 @@
 package com.library.search.publisher;
 
+/**
+ *
+ * @author Lucas Napoli
+ * V1.0
+ * Library Microservices
+ * Service Publisher Search
+ */
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;
@@ -9,7 +17,18 @@ import org.w3c.dom.Element;
 
 import java.util.ArrayList;
 
+/**
+ *
+ * Data Base reader in XML
+ */
+
 public class DataBaseManager {
+
+    /**
+     *
+     * Data Base reader in XML
+     * @return ArrayList Publisher
+     */
 
     public ArrayList<Publisher> repoReader () {
         ArrayList<Publisher> publisherArrayList = new ArrayList<Publisher>();
